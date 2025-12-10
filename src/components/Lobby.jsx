@@ -78,7 +78,7 @@ const Lobby = ({ onStartGame }) => {
 
   return (
     <div className="lobby">
-      <h1>Guess the Impostor</h1>
+      <h1>Guess The Pootis</h1>
 
       <div className="connection-status">
         <span className={isConnected ? 'connected' : 'disconnected'}>
