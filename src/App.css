@@ -1,0 +1,441 @@
+.app {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 768px) {
+  .app {
+    padding: 10px;
+    margin: 0 10px;
+  }
+}
+
+/* Lobby Styles */
+.lobby {
+  text-align: center;
+}
+
+.lobby h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.room-section, .players-section {
+  margin: 15px 0;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.join-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 300px;
+  margin: 15px auto;
+}
+
+.join-section input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.join-section button, .start-button {
+  padding: 14px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  min-height: 44px; /* Minimum touch target */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.start-button {
+  margin-top: 20px;
+  font-size: 18px;
+  padding: 16px 30px;
+  min-height: 48px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .lobby h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .room-section, .players-section {
+    margin: 10px 0;
+    padding: 12px;
+  }
+
+  .join-section {
+    margin: 12px auto;
+    gap: 10px;
+  }
+
+  .join-section input {
+    padding: 14px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .join-section button, .start-button {
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+}
+
+/* Game Styles */
+.game {
+  text-align: center;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.timer {
+  font-size: 20px;
+  font-weight: bold;
+  color: #dc3545;
+}
+
+.word-display {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #e9ecef;
+  border-radius: 10px;
+}
+
+.word-display h2 {
+  margin: 0 0 8px 0;
+  color: #495057;
+  font-size: 18px;
+}
+
+.impostor-hint {
+  color: #dc3545;
+  font-style: italic;
+  margin: 8px 0 0 0;
+  font-size: 14px;
+}
+
+/* Mobile adjustments for game */
+@media (max-width: 768px) {
+  .game-header {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .timer {
+    font-size: 18px;
+  }
+
+  .word-display {
+    margin: 15px 0;
+    padding: 12px;
+  }
+
+  .word-display h2 {
+    font-size: 16px;
+  }
+}
+
+.turn-section, .voting-section {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.description-input {
+  margin-top: 15px;
+}
+
+.description-input textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: vertical;
+  min-height: 100px;
+  box-sizing: border-box;
+}
+
+.description-input p {
+  margin: 5px 0;
+  font-size: 12px;
+  color: #666;
+}
+
+.description-input button {
+  margin-top: 12px;
+  padding: 14px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  min-height: 44px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.description-input button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Mobile adjustments for turn section */
+@media (max-width: 768px) {
+  .turn-section, .voting-section {
+    margin: 15px 0;
+    padding: 12px;
+  }
+
+  .description-input {
+    margin-top: 12px;
+  }
+
+  .description-input textarea {
+    min-height: 120px;
+    padding: 14px;
+  }
+
+  .description-input button {
+    margin-top: 15px;
+    padding: 16px 20px;
+  }
+}
+
+.descriptions-review {
+  margin-bottom: 20px;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.descriptions-review h4 {
+  margin-top: 0;
+  color: #495057;
+  font-size: 16px;
+}
+
+.description-item {
+  margin: 8px 0;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  border-left: 3px solid #007bff;
+  text-align: left;
+}
+
+.description-item strong {
+  color: #007bff;
+}
+
+.vote-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.vote-button {
+  padding: 14px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  min-height: 44px;
+  transition: background-color 0.2s;
+}
+
+.vote-button:hover {
+  background-color: #218838;
+}
+
+.end-voting {
+  background-color: #dc3545;
+  padding: 14px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  min-height: 44px;
+}
+
+.end-voting:hover {
+  background-color: #c82333;
+}
+
+/* Mobile adjustments for voting */
+@media (max-width: 768px) {
+  .descriptions-review {
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+
+  .description-item {
+    margin: 6px 0;
+    padding: 8px;
+  }
+
+  .vote-buttons {
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .vote-button, .end-voting {
+    padding: 16px;
+    font-size: 16px;
+  }
+}
+
+.players-list {
+  margin-top: 20px;
+}
+
+.players-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.players-list li {
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+/* Results Styles */
+.results {
+  text-align: center;
+}
+
+.impostor-reveal {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f8d7da;
+  border: 2px solid #dc3545;
+  border-radius: 10px;
+}
+
+.impostor-name {
+  color: #dc3545;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.voting-results {
+  margin: 20px 0;
+  text-align: left;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.voting-results ul {
+  list-style: none;
+  padding: 0;
+}
+
+.impostor-indicator {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.outcome {
+  margin: 20px 0;
+}
+
+.success {
+  color: #28a745;
+  font-size: 16px;
+}
+
+.failure {
+  color: #dc3545;
+  font-size: 16px;
+}
+
+.restart-button {
+  padding: 16px 30px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  min-height: 44px;
+  width: 100%;
+  max-width: 200px;
+}
+
+/* Mobile adjustments for results and general */
+@media (max-width: 768px) {
+  .players-list {
+    margin-top: 15px;
+  }
+
+  .impostor-reveal {
+    margin: 15px 0;
+    padding: 12px;
+  }
+
+  .impostor-name {
+    font-size: 16px;
+  }
+
+  .voting-results {
+    margin: 15px 0;
+  }
+
+  .outcome {
+    margin: 15px 0;
+  }
+
+  .restart-button {
+    max-width: none;
+    padding: 18px 30px;
+    font-size: 16px;
+  }
+}
+
+/* General mobile improvements */
+@media (max-width: 768px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  button {
+    -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+  }
+
+  input, textarea, button {
+    font-family: inherit;
+  }
+}
