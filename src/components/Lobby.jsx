@@ -43,6 +43,8 @@ const Lobby = ({ onStartGame }) => {
     };
   }, []);
 
+  console.log("test ");
+  
   const generateRoomCode = () => {
     const code = Math.floor(1000 + Math.random() * 9000).toString();
     setRoomCode(code);
